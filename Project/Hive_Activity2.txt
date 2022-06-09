@@ -1,0 +1,26 @@
+hive> SELECT COUNT(*) FROM episodeIV WHERE INSTR(line, 'Luke')>0;
+Query ID = root_20220609150813_b7e703eb-8cb8-4fb0-868c-36357303c972
+Total jobs = 1
+Launching Job 1 out of 1
+Number of reduce tasks determined at compile time: 1
+In order to change the average load for a reducer (in bytes):
+  set hive.exec.reducers.bytes.per.reducer=<number>
+In order to limit the maximum number of reducers:
+  set hive.exec.reducers.max=<number>
+In order to set a constant number of reducers:
+  set mapreduce.job.reduces=<number>
+Starting Job = job_1654764403910_0021, Tracking URL = http://fd86f7011db6:8088/proxy/application_1654764403910_0021/
+Kill Command = /usr/local/hadoop/bin/mapred job  -kill job_1654764403910_0021
+Hadoop job information for Stage-1: number of mappers: 1; number of reducers: 1
+2022-06-09 15:08:32,441 Stage-1 map = 0%,  reduce = 0%
+2022-06-09 15:08:44,822 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 9.71 sec
+2022-06-09 15:08:55,610 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 17.02 sec
+MapReduce Total cumulative CPU time: 17 seconds 20 msec
+Ended Job = job_1654764403910_0021
+MapReduce Jobs Launched:
+Stage-Stage-1: Map: 1  Reduce: 1   Cumulative CPU: 17.02 sec   HDFS Read: 81909 HDFS Write: 102 SUCCESS
+Total MapReduce CPU Time Spent: 17 seconds 20 msec
+OK
+56
+Time taken: 44.537 seconds, Fetched: 1 row(s)
+hive>
